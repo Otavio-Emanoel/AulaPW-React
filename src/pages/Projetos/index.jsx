@@ -1,11 +1,17 @@
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
+import Container from "../../components/Container"
 
 function Projetos() {
     return (
         <>
             <Header />
-            <h1>Projetos</h1>
+            <Container children={
+                <>
+                    <h1>Projetos</h1>
+                    <p>Projetos bem legais</p>
+                </>
+            } />
             <Footer />
         </>
     )

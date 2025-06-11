@@ -1,4 +1,4 @@
-.container {
+.home {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -6,17 +6,17 @@
     justify-content: space-around;
 }
 
-.container img {
+.home img {
     height: 500px;
 }
 
-.container p {
+.home p {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.container span {
+.home span {
     color: var(--red);
 }
 
@@ -28,14 +28,17 @@
     border: 0;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    transition: all .3s;
 }
 
-.btn-red{
+.btn_red{
     background-color: var(--red);
     color: var(--white);
 
 }
 
-.btn-red:hover {
+.btn_red:hover {
     background-color: var(--primary);
 }
