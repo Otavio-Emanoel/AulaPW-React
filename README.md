@@ -14,3 +14,8 @@ If you are developing a production application, we recommend using TypeScript wi
 # GitHub Pages
 
 https://otavio-emanoel.github.io/AulaPW-React/
+
+# Vercel
+
+https://aula-react-pw.vercel.app/#/AulaPW-React
+
