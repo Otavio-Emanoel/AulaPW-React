@@ -1,0 +1,155 @@
+.contatoSection {
+    background: rgba(255,255,255,0.08);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    padding: 2.5rem 2rem;
+    max-width: 500px;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInContato 1s;
+}
+
+.titulo {
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 0.7rem;
+    letter-spacing: 1px;
+    animation: slideDown 0.7s;
+}
+
+.subtitulo {
+    color: var(--soft-white);
+    font-size: 1.08rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.2s;
+}
+
+.formContato {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.7rem;
+    animation: fadeInUp 1.1s;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.inputGroup label {
+    font-size: 1rem;
+    color: var(--red);
+    font-weight: 600;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1.5px solid var(--secondary);
+    background: rgba(255,255,255,0.13);
+    color: var(--white);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(233,69,96,0.13);
+}
+
+.btnEnviar {
+    width: fit-content;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.12rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.btnEnviar:hover {
+    background: linear-gradient(90deg, var(--secondary) 60%, var(--red) 100%);
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 6px 24px rgba(233,69,96,0.18);
+}
+
+.btnEnviar svg {
+    margin-left: 0.3rem;
+    transition: transform 0.2s;
+}
+
+.btnEnviar:hover svg {
+    transform: translateX(4px) scale(1.15);
+}
+
+.redes {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+    justify-content: center;
+    animation: fadeIn 1.3s;
+}
+
+.redes img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.redes img:hover {
+    transform: scale(1.18) rotate(-8deg);
+    filter: drop-shadow(0 0 8px var(--soft-white));
+}
+
+@media (max-width: 600px) {
+    .contatoSection {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+}
+
+@keyframes fadeInContato {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}

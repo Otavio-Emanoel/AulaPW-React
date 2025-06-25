@@ -1,0 +1,173 @@
+.projetosSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: rgba(255,255,255,0.07);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(31,38,135,0.10);
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1.5px solid rgba(255,255,255,0.13);
+    animation: fadeInProjetos 0.8s;
+}
+
+.titulo {
+    font-size: 2.1rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2.2rem;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.gridProjetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.projetoCard {
+    background: rgba(255,255,255,0.13);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(233,69,96,0.07);
+    padding: 1.2rem 1rem 1.1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    border-left: 4px solid var(--red);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    min-height: 340px;
+    max-width: 100%;
+    position: relative;
+}
+
+.projetoCard:hover {
+    transform: scale(1.04) translateY(-3px);
+    box-shadow: 0 6px 24px rgba(233,69,96,0.13);
+    border-left: 4px solid var(--secondary);
+}
+
+.imgContainer {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(31,38,135,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+    border: 2px solid var(--red);
+    transition: border-color 0.2s;
+}
+
+.projetoCard:hover .imgContainer {
+    border-color: var(--secondary);
+}
+
+.imgContainer img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.infoProjeto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.projetoCard h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.1rem;
+}
+
+.tecnologias {
+    font-size: 0.98rem;
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.descricao {
+    font-size: 1.01rem;
+    color: var(--soft-white);
+    margin-bottom: 0.5rem;
+    flex: 1;
+}
+
+.btnAcessar {
+    margin-top: auto;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 7px;
+    text-decoration: none;
+    box-shadow: 0 1px 6px rgba(233,69,96,0.10);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btnAcessar:hover {
+    background: linear-gradient(90deg, var(--secondary) 60%, var(--red) 100%);
+    transform: scale(1.07) translateX(3px);
+}
+
+.btnAcessar svg {
+    transition: transform 0.2s;
+}
+
+.btnAcessar:hover svg {
+    transform: translateX(3px) scale(1.13);
+}
+
+.samuelSection {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.semProjetos {
+    color: var(--soft-white);
+    font-size: 1.05rem;
+    margin-top: 0.7rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .gridProjetos {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .projetoCard {
+        min-height: 0;
+    }
+}

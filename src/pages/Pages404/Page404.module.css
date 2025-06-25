@@ -1,24 +1,96 @@
-.errorImage {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-} 
-
-.errorBtn {
-    width: 150px;
-    height: 70px;
-    background-color: #f50505;
-    transition: .3s all;
-    text-decoration: none;
-    text-align: center;
+.errorContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 60vh;
+    gap: 1.2rem;
+    animation: fadeIn404 0.9s;
+    text-align: center;
+}
+
+.errorTitle {
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+    animation: bounce404 1.2s;
+}
+
+.errorMsg {
+    font-size: 1.3rem;
+    color: var(--soft-white);
+    margin-bottom: 0.5rem;
+    animation: fadeInUp404 1.2s;
+}
+
+.sadFace {
+    font-size: 2rem;
+    color: var(--red);
+    display: inline-block;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+
+.errorImage {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(233,69,96,0.13);
+    margin: 1rem 0;
+    animation: float404 2.5s infinite ease-in-out;
+    background: #fff;
+}
+
+.errorBtn {
+    width: 180px;
+    height: 54px;
+    background: linear-gradient(90deg, var(--red) 60%, var(--secondary) 100%);
+    transition: 0.3s all;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 16px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(233,69,96,0.10);
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
 }
 
 .errorBtn:hover {
-    background-color: #900101;
+    background: linear-gradient(90deg, var(--secondary) 60%, var(--red) 100%);
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 6px 24px rgba(233,69,96,0.18);
+}
+
+@keyframes fadeIn404 {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp404 {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce404 {
+    0% { transform: scale(0.9);}
+    50% { transform: scale(1.05);}
+    100% { transform: scale(1);}
+}
+
+@keyframes float404 {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-18px);}
 }
