@@ -4,8 +4,16 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { Link } from 'react-router-dom'
 import Container from '../../components/Container'
+import { useState } from 'react'
 
 function Home() {
+    const [likes, setLikes] = useState(0);
+
+    function handleLike() {
+        setLikes(likes + 1);
+        console.log(`Quantidade de likes: ${likes + 1}`);
+    }
+
     return (
         <>
             <Header />
@@ -31,6 +39,13 @@ function Home() {
                         </figure>
                     </div>
                 </section>
+                <div className={styles.like_container}>
+                    <button className={styles.like} onClick={handleLike}>
+                        <img src="https://cdn-icons-png.flaticon.com/512/7626/7626718.png" />
+                    </button>
+
+                    <p className={styles.like_text}>Quantidade de likes: {likes}</p>
+                </div>
             </Container>
             <Footer />
         </>
