@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+    background: transparent;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     margin-top: 2rem;
@@ -187,6 +187,10 @@
     bottom: 100px;
     right: 20px;
 
+}
+
+.modalContent {
+    color: #000;
 }
 
 @media (max-width: 900px) {
